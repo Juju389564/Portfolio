@@ -296,3 +296,7 @@ footer {
     background-color: #cf9144;
 }
 
+.center {
+    text-align: center;
+    margin-top: 20px;
+}
