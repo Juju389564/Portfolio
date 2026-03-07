@@ -35,46 +35,120 @@
             <img src="images/TheCollapseIsNear/GameInterface.png" alt="Image du projet" class="project-image">
 
             <p class="indent">
-                Texte de présentation du projet. Ce paragraphe explique le contexte, 
-                l’objectif, et ce que tu voulais accomplir.
+                J’ai eu l’incroyable opportunité de participer à la Scientific Game Jam de Montréal 2025, 
+                qui se déroulait à l’Indie Asylum. Nous étions une équipe de cinq, et ensemble nous avons 
+                créé The Collapse is Near. Comme pour chaque équipe, notre point de départ était la thèse d’un 
+                scientifique, et nous avons eu la chance de travailler avec Emmanuel Calvet, chercheur et 
+                développeur qui étudie l’équilibre entre ordre et chaos dans les systèmes complexes. 
+                Ses recherches portent sur la manière dont cet équilibre pourrait permettre de concevoir 
+                des circuits neuromorphiques plus efficaces, capables de traiter d’immenses réseaux neuronaux 
+                tout en consommant beaucoup moins d’énergie que les technologies actuelles. L’idée qu’un système 
+                ne peut survivre que s’il évite les extrêmes nous a beaucoup inspirés.
             </p>
 
-            <h2>Défis techniques</h2>
+            <p class="indent">
+                À partir de là, nous avons imaginé un soleil instable, 
+                constamment tiraillé entre l’Ordre et le Chaos. Le joueur interagit avec lui en lui 
+                envoyant des messages au clavier : chaque message influence l’état du soleil, qui réagit 
+                en se stabilisant ou en s’emballant selon ce qu’on lui envoie. Si l’on tombe dans un extrême, 
+                le soleil finit par exploser ou s’effondrer, et la partie se termine. Toute l’expérience 
+                repose sur cette tension permanente, sur cette tentative de maintenir un équilibre fragile 
+                dans un système qui ne demande qu’à basculer. Le soleil répond visuellement aux messages 
+                du joueur, créant une sorte de dialogue étrange et presque méditatif où l’on joue autant 
+                avec le système qu’avec sa propre manière d’écrire.
+            </p>
+
+            <p class="indent">
+                Si vous souhaitez en savoir plus sur le système de calcul derrière le jeu, je vous invite à consulter 
+                <a href="https://manuneuro.github.io/EmmanuelCalvet//2025/05/26/scientific_game_jam.html" target="_blank" rel="noopener noreferrer">la page explicative rédigée par notre spécialiste.</a> 
+                Il l’explique bien mieux que moi. 
+
+            </p>
+
+            <h2> PlaceHolder build de base</h2>
+
+            <p class="indent">
+                La jam durait deux jours et nous avons eu beaucoup de mal à nous lancer au début. 
+                Nous ne trouvions pas d’idée de concept qui soit à la fois stimulante à jouer et 
+                fidèle aux recherches d’Emmanuel. Nous avons passé la majorité de la première journée 
+                à discuter de nos idées. Nous ne nous sommes lancés dans le développement qu’en fin d’après-midi, 
+                et la présentation du jeu était à 18 h le lendemain. En considérant cette difficulté, 
+                je suis particulièrement fière du jeu que nous avons réussi à produire.
+            </p>
+
+            <p class="indent">
+                Sur ce projet, je me suis occupée de coder une partie du gameplay. 
+                Emmanuel s’est chargé du calcul de l’entropie, et j’ai fait en sorte que ce système 
+                interagisse correctement avec le soleil. J’ai également codé quelques effets visuels, 
+                comme la petite barre centrale rouge et verte qui doit rester au milieu pour stabiliser 
+                le soleil (réalisée avec un petit shader en HLSL). Trop de vert indiquait un soleil trop agité, 
+                trop de rouge un soleil trop calme. J’ai aussi programmé quelques animations pour les boutons de 
+                la console du joueur (animations réalisées entièrement en code), et j’ai ajusté le déclenchement 
+                du VFX d’ondes, réalisé par un de mes coéquipiers.
+
+            </p>
+
+            <p class="indent">
+                À la fin de la jam, nous avons pu présenter notre jeu devant un jury, et une séance de 
+                playtest ouverte au public a été organisée une semaine plus tard. Les équipes avaient le droit, 
+                si elles le souhaitaient, d’améliorer leurs jeux entre la jam et les playtests. La démo jouable 
+                disponible plus haut est celle que nous avons rendue à la fin de la jam. Avec les difficultés 
+                rencontrées au début du projet, plusieurs éléments auxquels nous avions réfléchi n’avaient pas 
+                pu être intégrés par manque de temps. Par exemple, notre jeu avait une condition de défaite — 
+                le soleil explose lorsqu’on n’arrive plus à le stabiliser — mais aucune condition de victoire : 
+                le jeu continuait tant que le soleil n’avait pas explosé. Aucun moyen de le rendre stable 
+                n’existait. Nous avons donc poursuivi le développement. Nous avons ajouté une condition de 
+                victoire (dont je me suis occupée), quelques éléments visuels (comme un graphique montrant 
+                l’entropie des clics du joueur en temps réel), des menus explicatifs et une page de crédits 
+                pour présenter les personnes qui nous ont accompagnés sur ce projet.
+
+            </p>
+
+            <p class="indent">
+                Emmanuel a également choisi de revoir le système de calcul derrière le jeu pour 
+                qu’il corresponde mieux à ses recherches. Ce nouveau système change complètement 
+                la manière dont on doit taper sur les touches du clavier pour stabiliser le soleil. 
+                Pour les playtests, nous avons donc décidé de présenter deux versions du jeu.
+            </p>
+
+            <p class="indent">
+                Une version avec condition de victoire, de meilleurs menus et quelques améliorations visuelles, 
+                mais le même gameplay que celui de la jam. Le système ne prend en compte que la variété des touches 
+                pressées, pas le nombre de répétitions ni les motifs. Il suffit de cliquer une fois sur environ la 
+                moitié des touches du clavier à chaque envoi pour stabiliser le soleil.
+
+            </p>
+
+            <h2> PlaceHolder build 2</h2>
+
+            <p class="indent">
+                Et une version avec les mêmes améliorations, et en plus, le nouveau système de calcul, 
+                qui illustre mieux les recherches d’Emmanuel. Ce système est nettement plus complexe et 
+                prend en compte davantage de paramètres pour déterminer le niveau d’entropie de chaque “message” 
+                envoyé au soleil. Là encore, je vous invite à lire 
+                <a href="https://manuneuro.github.io/EmmanuelCalvet//2025/05/26/scientific_game_jam.html" target="_blank" rel="noopener noreferrer">les explications du chercheur</a> 
+                si vous souhaitez comprendre les mathématiques derrière le jeu.
+
+
+            </p>
+
+            <h2> PlaceHolder build 3</h2>
+
             <p>
-                Décris ici les problèmes rencontrés, les contraintes, et ce que tu as dû apprendre.
+                Des versions Windows des différents builds sont également disponibles sur <a href="https://cognoman.itch.io/the-collapse-is-near" target="_blank" rel="noopener noreferrer">notre page itch.io.</a>  
+                Pour finir, voici une petite vidéo démo du jeu (version fin de jam uniquement) :
+
             </p>
 
-            <h2>Solutions et approche</h2>
-            <p>
-                Explique comment tu as résolu les problèmes, les systèmes que tu as mis en place,
-                et ce que tu as amélioré.
-            </p>
-
-            <h2>Ajout lien exterieur</h2>
-            <p>
-                Vous pouvez consulter la documentation officielle 
-                <a href="https://www.unrealengine.com" target="_blank" rel="noopener noreferrer">sur le site d’Unreal Engine</a>.
-            </p>
-
-            <h2>Test Vidéo youtube</h2>
             <div class="video-container">
                 <iframe 
-                    src="https://youtube.com/embed/dkFTtfwy9Ik" 
+                    src="https://youtube.com/embed/kioWDBImbgo" 
                     title="YouTube video player" 
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
             </div>
-
-
-            <h2>Outils utilisés</h2>
-            <ul>
-                <li>Unreal Engine</li>
-                <li>Blueprints</li>
-                <li>Photoshop</li>
-                <li>etc.</li>
-            </ul>
 
         </div>
     </section>
