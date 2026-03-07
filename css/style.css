@@ -73,3 +73,28 @@ footer {
     text-align: center;
     margin-bottom: 20px;
 }
+
+.about {
+    padding: 60px 20px;
+    background: #fafafa;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.about-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-container p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
