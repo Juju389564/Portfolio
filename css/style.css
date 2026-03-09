@@ -90,6 +90,7 @@ nav a {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    margin-bottom: 20px;
 }
 
 .other-cards .project-card {
@@ -231,6 +232,21 @@ nav a {
     height: 100%;
     border-radius: 8px;
 }
+
+.short-container {
+    width: 315px;
+    height: 560px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.short-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 
 .game-frame {
     width: 100%;

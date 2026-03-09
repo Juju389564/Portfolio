@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataviz EULA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/icon-site.png">
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Julie Guédès – Tech Artist</a>
+            <ul>
+                <li><a href="about.html">À propos de moi</a></li>
+                <li class="dropdown">
+                    <a href="#">Projects ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="projectEscapeGameTech2.html">The Drowsy's Mystery </a></li>
+                        <li><a href="projectScientificJam2025.html">The Collapse Is Near</a></li>
+                        <li><a href="projectRubijam2024.html">Frame of Mind</a> </li>
+                        <li><a href="projectOutilsPython.html">Pixel art générateur</a> </li>
+                        <li><a href="projectDatavizEULA.html">Data Visualisation</a> </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-page">
+        <div class="project-container">
+
+            <h1>Projet de data visualisation</h1>
+
+            <p class="indent">
+                Dans le cadre d’un cours de data visualisation en Tech Art 3, nous devions explorer la comparaison de données 
+                sous un angle créatif et artistique. Le projet portait sur l’analyse de plusieurs Contrats de licence utilisateur 
+                final (CLUF), plus connus sous le terme anglais <i>EULA (End User License Agreements)</i>, ces textes juridiques 
+                que l’on accepte quotidiennement en cliquant sur <i>“I agree”</i> sans réellement les lire. L’objectif était de 
+                mettre en lumière leur longueur, leur complexité et parfois leur absurdité, tout en restant fidèle aux données 
+                et à leur sens.
+            </p>
+
+            <p class="indent">
+                 Nous avions à disposition les <i>EULA</i> de plusieurs logiciels couramment utilisés dans l’industrie du jeu vidéo, 
+                 et le choix du critère de comparaison était libre. Certains étudiants ont analysé la présence d’articles de loi, 
+                 d’autres se sont concentrés sur la fréquence de certains mots. Avec ma binôme, nous avons choisi de comparer la 
+                 longueur des textes. La différence était frappante entre les <i>EULA</i> de logiciels open source comme Blender et ceux 
+                 de grandes entreprises comme Adobe. Certains documents sont si longs et complexes qu’ils semblent conçus pour 
+                 décourager la lecture. Une fois notre angle défini, il nous restait à trouver une manière visuelle de 
+                 représenter cette disproportion.
+            </p>
+
+            <p class="indent">
+                Nous voulions représenter ces textes non pas comme de simples blocs de mots, mais comme une matière fluide, quelque 
+                chose que l’on consomme sans en connaître la composition. L’idée était de transformer chaque <i>EULA</i> en un liquide dont 
+                la quantité reflète sa longueur : plus le texte est dense et complexe, plus le volume est important. Cette approche 
+                nous permettait de souligner la manière dont les grandes organisations nous invitent à accepter des conditions opaques, 
+                presque automatiquement, sans mesurer ce que nous “ingérons” réellement en cliquant sur <i>I agree</i>.
+            </p>
+
+            <div class="short-container">
+                <iframe 
+                    src="https://youtube.com/embed/XnU_yM4foJQ" 
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <p class="indent">
+                Pour réaliser ce projet, nous avons choisi d’utiliser Blender. Ma binôme s’est chargée de la direction 
+                artistique : elle a imaginé et modélisé l’environnement dans lequel les textes allaient être visualisés. 
+                De mon côté, j’étais responsable de la génération et de la simulation de la chute des mots. L’avantage d’une 
+                animation par rapport à un projet interactif est que les contraintes de performance sont différentes : 
+                une fois le rendu final produit, peu importe si chaque image a demandé plusieurs minutes de calcul. 
+                J’ai donc pu pousser mon ordinateur à ses limites pour obtenir une simulation aussi fidèle que possible 
+                à nos données.
+            </p>
+
+            <p class="indent">
+                L’importance était de représenter chaque <i>EULA</i> à la même échelle. À l’origine, je souhaitais faire tomber 
+                l’intégralité des mots dans les verres. Pour des textes relativement courts comme celui de Krita 
+                (environ 500 mots) ou même celui de Blender (environ 2 000 mots), cela restait envisageable. En revanche, 
+                pour les <i>EULA</i> d’Adobe (plus de 45 000 mots) ou d’Autodesk (près de 60 000 mots), la quantité de géométrie 
+                générée devenait beaucoup trop lourde. Pour rendre le projet réalisable, j’ai donc réduit l’échantillon en 
+                ne conservant qu’un mot sur dix, tout en veillant à préserver la proportion entre les différents textes. 
+                Même ainsi, le script python chargé de générer les modèles 3D des mots a mis plus de 45 minutes à traiter 
+                le fichier d’Autodesk.
+            </p>
+
+            <p class="indent">
+                Je tenais à utiliser les mots réels des textes, sans simplification artificielle. Cela a d’ailleurs produit 
+                quelques surprises : certains <i>EULA</i> contiennent des liens web extrêmement longs, qui apparaissent dans la 
+                simulation comme des “tiges” verticales se détachant du reste du liquide textuel. Ces anomalies visuelles 
+                rappellent que derrière l’apparente neutralité juridique, ces documents cachent parfois des éléments inattendus, 
+                voire absurdes.
+            </p>           
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Julie Guédès – Portfolio</p>
+    </footer>
+
+</body>
+</html>
