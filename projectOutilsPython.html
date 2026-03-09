@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outil python – Julie</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="images/github-icon-md.png">
+    <link rel="icon" type="image/png" href="images/icon-site.png">
 
 </head>
 
@@ -33,26 +33,26 @@
         <div class="project-container">
 
             <h1>Pixel art 3D générator</h1>
-            <h3>Outil python pour blender</h3>
+            <h3>Outil python pour Blender</h3>
 
             <img src="images/Pixelépées.png" alt="Image du projet" class="project-image">
 
             <p class="indent">
                 En cours de programmation Python, nous devions créer un outil capable de générer un objet 3D dans Blender 
-                à partir d’un fichier JSON produit en dehors du logiciel. L’objectif était d’apprendre à manipuler l’API 
+                à partir d’un fichier JSON. L’objectif était d’apprendre à manipuler l’<i>API</i> 
                 Python de Blender et à structurer un script simple. J’ai commencé par suivre cette consigne, mais j’ai 
-                rapidement eu envie d’aller plus loin et de transformer ce prototype en un véritable add‑on complet, 
+                rapidement eu envie d’aller plus loin et de transformer ce <i>prototype</i> en un véritable <i>add‑on</i> complet, 
                 capable de tout faire directement dans Blender, de l’image 2D jusqu’au modèle 3D final.
 
             </p>
 
             <p class="indent">
-                L’outil fonctionne avec Blender à partir de blender 3.6. Il permet d’importer une image, de choisir 
+                L’outil fonctionne avec Blender. Il permet d’importer une image, de choisir 
                 une résolution (jusqu’à 256×256 pixels, une limite volontaire pour éviter des modèles trop lourds), 
                 puis de générer automatiquement une version 3D pixelisée de cette image dans la scène. Il peut transformer 
                 n’importe quelle image (pnj, jpeg ou jpg) en pixel art 3D, mais le rendu est nettement meilleur avec une 
-                image déjà en pixel art ou avec un visuel simple et peu détaillé, comme un logo. Comme la définition est f
-                ortement réduite pour créer l’effet pixel art, les images très détaillées perdent beaucoup d’informations et 
+                image déjà en pixel art ou avec un visuel simple et peu détaillé, comme un logo. Comme la définition est 
+                fortement réduite pour créer l’effet pixel art, les images très détaillées perdent beaucoup d’informations et 
                 donnent un résultat plus brouillon.
             </p>
 
@@ -66,30 +66,30 @@
                 </iframe>
             </div>
 
-            <a href="add-onBlender/ImagePixelArtBlenderAddon.zip" download>Télécharger l'add-on</a>
+            <a href="add-onBlender/ImagePixelArtBlenderAddon.zip" download>Télécharger l'add-on (fonctionnel à partir de la version 3.6 et tester et fonctionnel sur la 5.0)</a>
 
             <p class="indent">
                 Le développement s’est fait en plusieurs étapes, chacune validée en cours avec un retour du professeur. 
                 J’ai d’abord écrit un script qui pixelise l’image selon la résolution choisie par l’utilisateur. Ensuite, 
                 j’ai créé un second script qui transforme cette image pixelisée en un fichier JSON contenant les informations 
                 nécessaires à la génération du modèle. Enfin, j’ai développé un troisième script qui lit ce JSON et génère le 
-                mesh 3D correspondant dans Blender. Ces trois scripts constituaient le cœur du devoir.
+                modèle 3D correspondant dans Blender. Ces trois scripts constituaient le cœur du devoir.
             </p>
 
             <p class="indent">
-                La partie qui dépasse le cadre du cours est venue ensuite. J’ai assemblé ces trois scripts en un add‑on complet, 
-                avec une interface dédiée dans le N‑panel, un bouton “Generate”, et une génération entièrement automatisée, 
-                sans passer par des fichiers externes. Pour que l’outil soit autonome, j’ai intégré directement la librairie 
-                Pillow dans l’add‑on, car Blender n’y a pas accès nativement et peut entrer en conflit si une autre version 
-                est installée dans son environnement virtuel. L’add‑on reste donc stable, portable et utilisable immédiatement, 
+                La partie qui dépasse le cadre du cours est venue ensuite. J’ai assemblé ces trois scripts en un <i>add‑on</i> 
+                complet, avec une interface dédiée dans le <i>N‑panel</i> et une génération entièrement automatisée, 
+                sans devoir passer par des fichiers externes. Pour que l’outil soit autonome, j’ai intégré la librairie <i>Pillow</i> 
+                directement dans l’<i>add‑on</i>, car Blender n’y a pas accès nativement et peut entrer en conflit si une autre version 
+                est installée dans son environnement virtuel. L’<i>add‑on</i> reste donc stable, portable et utilisable immédiatement, 
                 sans configuration supplémentaire.
             </p>
 
             <p class="indent">
                 Une fois installé, l’outil permet de sélectionner une image, de choisir la résolution, puis de générer 
-                automatiquement un modèle voxelisé organisé dans une collection dédiée, avec un matériau par couleur détectée. 
-                Pour l’installer dans Blender, il suffit d’aller dans Edit > Preferences > Add-ons, de cliquer sur 
-                Install for disk, de sélectionner le fichier .zip fourni, puis d’activer l’add‑on dans la liste.
+                automatiquement un modèle voxelisé avec un seul matériaux par objet. 
+                Pour l’installer dans Blender, il suffit d’aller dans <i>Edit</i> > <i>Preferences</i> > <i>Add-ons</i>, de cliquer sur 
+                <i>Install from disk</i>, de sélectionner le fichier .zip fourni, puis d’activer l’<i>add‑on</i> dans la liste.
             </p>    
             
 
