@@ -40,6 +40,15 @@ nav a {
     padding: 80px 20px;
 }
 
+
+.hero-icon {
+    width: 95px;         
+    max-width: 100%;      
+    height: auto;
+    margin-bottom: 1rem;  
+}
+
+
 /* Projects */
 .projects {
     max-width: 1000px;
